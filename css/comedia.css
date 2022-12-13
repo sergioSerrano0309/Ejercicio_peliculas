@@ -11,9 +11,7 @@
 
 body
 {
-    background-image: url("https://f4.bcbits.com/img/a0731793786_65");
-    background-size: cover;
-    position: relative;
+    background-color: yellow;
 }
 
 
@@ -46,7 +44,7 @@ h1
 {
     border: 5px black solid;
     border-radius: 15px;
-    background-color:  rgba(0, 217, 255, 0.75);
+    background-color:  rgb(0, 106, 255);
     text-align: center;
     width:900px;
     height:350px;

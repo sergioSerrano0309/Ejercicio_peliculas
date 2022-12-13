@@ -66,35 +66,55 @@
                         $votos = $registro['votos'];
                         $id_categoria = $registro['id_categoria'];                       
                         
-                        $pelicula = new pelicula($titulo, $año, $duracion, $sinopsis, $imagen, $votos, $id_categoria);
-    
-                        $listaPeliculas[$i] = $pelicula; 
-                        var_dump($pelicula);            
-                        $i++;                              
+                        $pelicula = $this->init($titulo,$año,$duracion,$sinopsis,$imagen,$votos,$id_categoria);
+                        $listaPeliculas[$i] = $pelicula;                      
+                        $i++;
+                                                                           
                     }  
-                    return $listaPeliculas;
-                    for($i = 0; $i < count($listaPeliculas); $i++)
-                    {
-                        var_dump($listaPeliculas[$i]);
-                        echo "<br>";
-                        echo "<br>";
-                    }
-                 
-                           
+                         
                 }
+
                 else
                 {
                     echo "No hay resultados";
                 }
-                          
+
+                return $listaPeliculas;
+                 
             }
 
         }
 
+        public function pintarPeliculas($listaPeliculas)
+        {
+
+        echo "<div class = 'pagina'>";
+
+        for ($i = 0; $i < count($listaPeliculas) ; $i++)
+        {
+            
+            echo "<div class = 'cajaTitulo'>";
+            echo "<div class = 'cajaImagen'><h1>".$listaPeliculas[$i][0]."</h1><img class='imagen' src='imgs/".$listaPeliculas[$i][4].".jpeg'><div class = 'duracion'><p><b>Duración: </b></p></div></div>";
+            echo "<div class = 'border'>";
+            echo "<div class = 'votos'><p><b>Votos: </b></div>";
+            echo "<div class = 'cajaSinopsis'>
+            </p><h1>Sinopsis</h1><p>esto será una sinopsis</p> 
+            <div class = 'verFicha'><a href='ficha.php'><p>Ver Ficha</p></a></div></div>";
+            echo "</div>";
+            echo "</div>";
+            
+        }
+
+         echo "</div>";
+        }
+
     }
 
+    
     $pelicula = new pelicula();
-    $pelicula->leerDatos();
+    $listaPeliculas = $pelicula->leerDatos();
+    $pelicula->pintarPeliculas($listaPeliculas)
+    
 
     ?>
 </body>
