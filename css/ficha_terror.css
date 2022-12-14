@@ -1,0 +1,75 @@
+* {margin: 0px; padding: 0px;} 
+body
+{
+    background-color: rgb(25,25,25);
+    text-align: center;
+    color: white;
+    
+}
+
+.cajaGrande
+{   
+    background-color: rgb(53, 52, 49);
+    border: 10px brown solid;
+    border-radius: 20px;
+    margin: 100px;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 700px;
+    width: 1000px;
+}
+.cajaIzq
+{
+    text-align: center;
+    float: left;
+    width: 50%;  
+    
+}
+.cajaDch
+{
+    float: right;
+    width: 50%;
+    height: 100%;
+    color: white;
+}
+.titulo
+{
+    color: white;
+    margin-top: 50px;
+    text-align: center;
+}
+img
+{
+    margin-top: 10px;
+    width: 300px;
+    margin-bottom: 10px;;
+}
+.sinopsis
+{
+    padding: 50px;
+}
+.añoDeSalida
+{
+    margin-top: 70px;
+}
+.directores
+{
+    padding: 50px;
+}
+.reparto
+{
+    padding: 50px;
+}
+a
+{
+    color: white;
+    text-decoration: none;    
+}
+a:hover
+{
+    color: orangered;
+}
+.voto
+{
+    padding-bottom: 50px;
+}

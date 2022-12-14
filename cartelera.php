@@ -11,10 +11,8 @@
     <h1>Elige tu catogería</h1>
     <div class="linea"></div>
     <div class = "categorias">
-        <form action="peliculas.php" method="POST">
-            <a href="peliculas.php?id_categoria=1"><div class = "terror">Terror</div></a>
-            <a href="peliculas.php?id_categoria=2"><div class = "comedia">Comedia</div></a>
-        </form>
+        <a href="peliculas.php?id_categoria=1"><div class = "terror">Terror</div></a>
+        <a href="peliculas.php?id_categoria=2"><div class = "comedia">Comedia</div></a>
     </div>
     <div class="lineaAbajo"></div>
 </body>

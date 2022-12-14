@@ -57,7 +57,7 @@
                     $i = 0;
                     while ($registro = mysqli_fetch_assoc($resultado))
                     {
-                        
+                        $this->init($titulo,$año,$duracion,$sinopsis,$imagen,$votos,$id_categoria);
                         $titulo = $registro['titulo'];
                         $año = $registro['año'];
                         $duracion = $registro['duración'];
@@ -66,10 +66,10 @@
                         $votos = $registro['votos'];
                         $id_categoria = $registro['id_categoria'];                       
                         
-                        $pelicula = $this->init($titulo,$año,$duracion,$sinopsis,$imagen,$votos,$id_categoria);
+                        $pelicula = [$titulo,$año,$duracion,$sinopsis,$imagen,$votos,$id_categoria];
                         $listaPeliculas[$i] = $pelicula;                      
                         $i++;
-                                                                           
+                                                                     
                     }  
                          
                 }
@@ -80,7 +80,7 @@
                 }
 
                 return $listaPeliculas;
-                 
+                
             }
 
         }
