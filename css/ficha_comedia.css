@@ -10,7 +10,10 @@ body
 .cajaGrande
 {   
     background-color: rgb(53, 52, 49);
-    border: 10px lightblue solid;
+    border-top: 10px lightblue solid;
+    border-left: 10px lightblue solid;
+    border-right: 10px rgb(63, 160, 192) solid;
+    border-bottom: 10px rgb(63, 160, 192) solid;
     border-radius: 20px;
     margin: 100px;
     margin-left: 20%;
