@@ -18,7 +18,7 @@ body
     margin: 100px;
     margin-left: 20%;
     margin-right: 20%;
-    height: 700px;
+    height: 750px;
     width: 1000px;
 }
 .cajaIzq
@@ -76,3 +76,27 @@ a:hover
 {
     padding-bottom: 50px;
 }
+.boton {
+    font-family: Arial;
+    color: #87001b;
+    font-size: 35px;
+    padding: 5px;
+    text-decoration: none;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 1px 3px #666666;
+    -moz-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    text-shadow: 1px 1px 3px #666666;
+    border: solid #87001b 4px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffad3b), to(#fa055b));
+    background: -moz-linear-gradient(top, #ffad3b, #fa055b);
+  }
+
+  .boton:hover {
+    color: #f6fa00;
+    border-color: #f6fa00;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#fcfcfc), to(#ffffb8));
+    background: -moz-linear-gradient(top, #fcfcfc, #ffff67)
+  }

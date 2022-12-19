@@ -80,7 +80,7 @@
                         $id_categoria = $registro['id_categoria'];  
                         $id_pelicula = $registro['id'];                     
                         $this->init($titulo,$año,$duracion,$sinopsis,$imagen,$votos,$id_categoria, $id_pelicula);
-                        $pelicula = [$titulo,$año,$duracion,$sinopsis,$imagen,$votos,$id_categoria];                    
+                        $pelicula = [$titulo,$año,$duracion,$sinopsis,$imagen,$votos,$id_categoria, $id_pelicula];                    
                     } 
     
                     return $pelicula;
@@ -198,11 +198,24 @@
             echo "<div class=reparto> Actores: ";
             for($i = 0; $i < count($actores); $i++)
             {
-                echo $actores[$i].", ";
+                if($i != count($actores) - 1)
+                {
+                    echo $actores[$i].", ";
+                }
+                else 
+                {
+                    echo $actores[$i].". ";
+                }
+
             }
             echo "</div>";
             echo "<div class=voto>Votos: ".$pelicula[5]."</div>";
-            echo "<div class=votar><a href=''>Votar</a></div>";
+            
+            echo "<form action='votos.php' method='post'>";
+            echo "  <input id='id_categoria' name='id_categoria' type='hidden' value='".$pelicula[6]."'>";
+            echo "  <input id='id_pelicula' name='id_pelicula' type='hidden' value='".$pelicula[7]."'>";
+            echo "  <input class=boton type = 'submit' value='Votar'></p>";
+            echo "</form>";
             echo "</div>";
             echo "</div>";
         }

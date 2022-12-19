@@ -61,12 +61,12 @@
         public function pintarCategorias($listaCategorias)
         {
             echo "<h1>Elige tu catogería</h1>";
-            echo "<div class='linea'></div>";
+            
             echo "<div class = 'categorias'>";
-            echo "<a href='peliculas.php?id_categoria=".$listaCategorias[0]."'><div class = 'terror'>Terror</div></a>";
-            echo "<a href='peliculas.php?id_categoria=".$listaCategorias[1]."'><div class = 'comedia'>Comedia</div></a>";
+            echo "<b><a href='peliculas.php?id_categoria=".$listaCategorias[0]."'><div class = 'terror'><img src = 'imgs/cuchillo.png'><br> Terror</div></a><b>";
+            echo "<b></b><a href='peliculas.php?id_categoria=".$listaCategorias[1]."'><div class = 'comedia'><img src='imgs/emoticonos.png'><br>Comedia</div></a><b>";
             echo "</div>";
-            echo "<div class='lineaAbajo'></div>";
+
         }
     }
 

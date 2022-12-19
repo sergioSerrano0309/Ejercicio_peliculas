@@ -1,0 +1,38 @@
+body
+{
+    background-color: rgb(34, 34, 34);
+    font-size: x-large;
+    text-align: center;
+    color: aliceblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+}
+
+h1
+{
+    color: aliceblue;
+}
+
+p
+{
+    font-size: x-large;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bolder;
+}
+
+a
+{
+    color: orange;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: yellow;
+}
+
+a:active
+{
+    color:rgb(255, 255, 118);
+}

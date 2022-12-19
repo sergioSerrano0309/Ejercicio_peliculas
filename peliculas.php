@@ -18,6 +18,7 @@
 </head>
 <body>
 <?php
+
 ini_set('display_errors', 'On');
 ini_set('html_errors', 0);
 
@@ -51,6 +52,12 @@ class peliculas
             mysqli_select_db($conexion, 'cartelera');
             $id_categoria = $_GET['id_categoria'];
             $sanitized_categoria_id = mysqli_real_escape_string($conexion, $id_categoria);
+
+            if($_GET["orden"]=="alfasc")
+            {
+                $orden = "order by titulo asc";
+            }
+            $sanitized_orden = mysqli_real_escape_string($conexion, $orden);
             $consulta = "select * from peliculas where id_categoria='".$sanitized_categoria_id."';";                $resultado = mysqli_query($conexion, $consulta);
         
         if (!$resultado)
@@ -99,9 +106,15 @@ class peliculas
 
     public function pintarPeliculas($listaPeliculas)
     {
-
+        echo "<div class = 'todo'>";
         echo "<div class = 'pagina'>";
 
+    echo "<ul>";   
+        echo "<li><a href='peliculas.php?id_categoria=".$_GET['id_categoria']."&orden=alfasc'><p>Ordenar Alfabéticamente(↑)</p></a></li>";
+        echo "<li><a href='peliculas.php?id_categoria=".$_GET['id_categoria']."&orden=alfdesc'><p>Ordenar Alfabéticamente(↓)</p></a></li>";
+        echo "<li><a href='peliculas.php?id_categoria=".$_GET['id_categoria']."&orden=votasc'><p>Ordenar por votos(↑)</p></a></li>";
+        echo "<li><a href='peliculas.php?id_categoria=".$_GET['id_categoria']."&orden=votdesc'><p>Ordenar por votos(↓)</p></a></li>";
+    echo "</ul>";
         for ($i = 0; $i < count($listaPeliculas) ; $i++)
         {
             
@@ -110,13 +123,14 @@ class peliculas
             echo "<div class = 'border'>";
             echo "<div class = 'votos'><p><b>Votos: ".$listaPeliculas[$i][5]."</b></div>";
             echo "<div class = 'cajaSinopsis'>
-            </p><h1>Sinopsis</h1><br><p>".$listaPeliculas[$i][3]."</p> 
+            </p><h1>Sinopsis</h1><br><p>".substr($listaPeliculas[$i][3], 0, -20)." ...</p> 
             <div class = 'verFicha'><a href='ficha.php?id_pelicula=".$listaPeliculas[$i][7]."&id_categoria=".$listaPeliculas[$i][6]."'><p>Ver Ficha</p></a></div></div>";
             echo "</div>";
             echo "</div>";
             
         }
 
+        echo "</div>";
         echo "</div>";
     }
 }

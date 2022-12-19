@@ -1,15 +1,15 @@
 * {margin: 0px; padding: 0px;} 
 body{
     position: relative;
-    background-color: rgb(142, 175, 236);
+    background-color: rgb(30, 30, 30);
 }
 h1{
     margin-top: 50px;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 5px 5px white;
-    color: royalblue;
-    font-size: 50px;
+    text-shadow: 0 0 0.2em rgb(43, 255, 0), 0 0 0.2em rgb(0, 255, 170);
+    color: rgb(22, 6, 6);
+    font-size: 100px;
 }
 div{  
     margin-top: 30px;
@@ -28,19 +28,27 @@ div{
     max-height: 100%;
 }
 .terror{
-    border: 5px royalblue solid;
+    border: 5px rgb(172, 0, 46) solid;
     border-radius: 10px;
-    background-color: rgba(154, 205, 242, 0.75);
+    background-color: rgba(39, 28, 30, 0.75);
     float: left;
     position: absolute;
     left: 25%;
+    -webkit-box-shadow: 0px 2px 16px 8px rgb(88, 0, 0);
+    -moz-box-shadow: 0px 2px 16px 8px rgb(80, 0, 70);
+    box-shadow: 0px 2px 16px 8px rgb(59, 0, 8);
+    color: red;
 }
 .comedia{  
-    border: 5px royalblue solid;
-    background-color: rgba(154, 205, 242, 0.75);
+    border: 5px rgb(255, 208, 0) solid;
+    background-color: rgb(30, 30, 30);
     border-radius: 10px;
     position: absolute;
     right: 25%;
+    -webkit-box-shadow: 0px 2px 16px 8px rgb(56, 54, 0);
+    -moz-box-shadow: 0px 2px 16px 8px rgb(56, 36, 0);
+    box-shadow: 0px 2px 16px 8px rgb(56, 30, 0);
+    color: rgb(255, 200, 1);
 }
 a{
     text-decoration: none;
@@ -63,4 +71,9 @@ a{
     margin-top: 200px;
     padding: 25px;
     background-color: white;
+}
+img
+{
+ max-width: 200px;
+ 
 }
