@@ -55,10 +55,27 @@ class peliculas
 
             if($_GET["orden"]=="alfasc")
             {
-                $orden = "order by titulo asc";
+                $orden = " order by titulo asc";
+            }
+            elseif($_GET["orden"]=="alfdesc")
+            {
+                $orden = " order by titulo desc";
+            }
+            elseif($_GET["orden"]=="votasc")
+            {
+                $orden = " order by votos asc";
+            }
+            elseif($_GET["orden"]=="votdesc")
+            {
+                $orden = " order by votos desc";
+            }
+            elseif(!isset($_GET["orden"]))
+            {
+                $orden = "";
             }
             $sanitized_orden = mysqli_real_escape_string($conexion, $orden);
-            $consulta = "select * from peliculas where id_categoria='".$sanitized_categoria_id."';";                $resultado = mysqli_query($conexion, $consulta);
+            $consulta = "select * from peliculas where id_categoria='".$sanitized_categoria_id."' ".$sanitized_orden.";";                
+            $resultado = mysqli_query($conexion, $consulta);
         
         if (!$resultado)
         {

@@ -63,8 +63,8 @@
             echo "<h1>Elige tu catogería</h1>";
             
             echo "<div class = 'categorias'>";
-            echo "<b><a href='peliculas.php?id_categoria=".$listaCategorias[0]."'><div class = 'terror'><img src = 'imgs/cuchillo.png'><br> Terror</div></a><b>";
-            echo "<b></b><a href='peliculas.php?id_categoria=".$listaCategorias[1]."'><div class = 'comedia'><img src='imgs/emoticonos.png'><br>Comedia</div></a><b>";
+            echo "<b><a href='peliculas.php?id_categoria=".$listaCategorias[0]."&orden=alfasc'><div class = 'terror'><img src = 'imgs/cuchillo.png'><br> Terror</div></a><b>";
+            echo "<b></b><a href='peliculas.php?id_categoria=".$listaCategorias[1]."&orden=alfasc'><div class = 'comedia'><img src='imgs/emoticonos.png'><br>Comedia</div></a><b>";
             echo "</div>";
 
         }
