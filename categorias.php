@@ -73,8 +73,7 @@
     $categorias = new categorias();
     $listaCategorias = $categorias->leerDatos();
     $categorias->pintarCategorias($listaCategorias);
-
-   
+  
     ?>
 </body>
 </html>
