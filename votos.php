@@ -31,7 +31,7 @@
         {
             echo "<h1>Votación realizada correctamente</h1>";
             echo "<a href='ficha.php?id_pelicula=".$_POST["id_pelicula"]."&id_categoria=".$_POST["id_categoria"]."'><p>Volver a la ficha</p></a>";
-            echo "<a href='peliculas.php?id_categoria=".$_POST["id_categoria"]."'><p>Volver a la lista de peliculas</p></a>";
+            echo "<a href='peliculas.php?id_categoria=".$_POST["id_categoria"]."&orden=alfasc'><p>Volver a la lista de peliculas</p></a>";
             echo "<a href='categorias.php'><p>Volver a la selección de categorías</p></a>";
         }
     ?>
